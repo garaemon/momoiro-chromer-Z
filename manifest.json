@@ -1,0 +1,11 @@
+{
+  "name": "momochromez",
+  "version": "0.0",
+  "description": "Change your chrome to push momoiro-clover by the legend rhythm",
+  "browser_action": {
+    "default_icon": "z.png"
+  },
+  "permissions": [
+    
+  ]
+}
