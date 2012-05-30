@@ -1,11 +1,29 @@
 {
-  "name": "momochromez",
+  "name": "Momoiro Chromer Z",
   "version": "0.0",
   "description": "Change your chrome to push momoiro-clover by the legend rhythm",
   "browser_action": {
-    "default_icon": "z.png"
+    "default_icon": "images/icons/z19.png",
+    "default_popup": "popup.html"
+  },
+  // "content_scripts":[{
+  //   //"js": ["blogchecker.js"],
+  //   // "css": ["mcz.css"],
+  //   //"matches":["http://*/*", "https://*/*"]
+  // }
+  // ],
+  "icons": {
+    "16": "images/icons/z16.png",
+    "48": "images/icons/z48.png",
+    "128": "images/icons/z128.png"
   },
   "permissions": [
-    
+    "tabs",
+    "http://ameblo.jp/takagi-sd",
+    "http://ameblo.jp/momota-sd",
+    "http://ameblo.jp/tamai-sd",
+    "http://ameblo.jp/sasaki-sd",
+    "http://ameblo.jp/ariyasu-sd",
+    "http://ajax.googleapis.com"
   ]
 }

@@ -1,0 +1,68 @@
+body {
+    font-size: 10px;
+    width: 400px;
+}
+
+ul {
+    list-style: none;
+}
+
+.reni {
+    color: #7a43b6;
+}
+.kanako {
+    color: #9d261d;
+}
+.shiori {
+    color: #ffc40d;
+}
+.ayaka {
+    color: #c3325f;
+}
+.momoka {
+    color: #46a546;
+}
+.akari {
+    color: #049cdb;
+}
+
+a:link.reni {
+    color: #7a43b6;   
+}
+
+a:visited.reni {
+    color: #7a43b6;   
+}
+
+a:link.kanako {
+    color: #9d261d;
+}
+
+a:visited.kanako {
+    color: #9d261d;
+}
+
+a:link.shiori {
+    colord;
+}
+
+a:visited.shiori {
+    color: #ffc40d;
+}
+
+a:link.ayaka {
+    colorf;
+}
+
+a:visited.ayaka {
+    color: #c3325f;
+}
+
+a:link.momoka {
+    color: #46a546;
+}
+
+a:visited.momoka {
+    color: #46a546;
+}
+
