@@ -16,6 +16,7 @@
   },
   "permissions": [
     "notifications",
+    "http://www.ustream.tv/channel/momoclotv",
     "tabs",
     "background",
     "http://ameblo.jp/takagi-sd",

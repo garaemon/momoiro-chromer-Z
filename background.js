@@ -1,6 +1,7 @@
 $(function() {
   var LATEST_BLOGS_ARTICLES = {};
   var WATCH_CYCLE = 60 * 1000;  //1 minute
+  var UST_URL = 'http://www.ustream.tv/channel/momoclotv';
   
   function watchUpdate(name) {
     $.ajax({
@@ -69,8 +70,49 @@ $(function() {
       initializeEachBlogArticle(name);
     }
   };
+    
   setTimeout(function() {
     console.log("start!");
     initializeBlogArticles();
   }, 1000);
+  var n;
+  // UST
+  var ustream_onlinp = false;
+  function ustWatch() {
+    $.ajax({
+      url: UST_URL,
+      error: function() {
+        console.log("cannot access console.log");
+        setTimeout(function() {
+          ustWatch();
+        }, WATCH_CYCLE);
+      },
+      success: function(data) {
+        if (data.match(/現在、番組はオフラインです/) ||
+            data.match(/Channel is offline/)) {
+          console.log("ustream is offline");
+          ustream_onlinp = false;
+          return;
+        }
+        else {
+          if (!ustream_onlinp) {
+            var icon = data.match(/class="image".+src="([^"]+)/gi)
+              ? RegExp.$1 : 'img/icon.png';
+            n = webkitNotifications.createNotification(icon,
+                                                       "momoclotv",
+                                                       'ustreamはじまってるよ!');
+            n.onclick = function () {
+              chrome.tabs.create({ url : UST_URL});
+              notification.cancel();
+            };
+            n.show();
+          }
+        }
+        setTimeout(function() {
+          ustWatch();
+        }, WATCH_CYCLE);
+      }
+    });
+  };
+  ustWatch();
 });
