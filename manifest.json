@@ -1,6 +1,6 @@
 {
   "name": "ももいろクローマーZ",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Change your chrome to push momoiro-clover by the legend rhythm",
   "browser_action": {
     "default_icon": "images/icons/z19.png",
