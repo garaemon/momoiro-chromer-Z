@@ -1,6 +1,6 @@
 {
   "name": "Momoiro Chromer Z",
-  "version": "0.0",
+  "version": "0.1",
   "description": "Change your chrome to push momoiro-clover by the legend rhythm",
   "browser_action": {
     "default_icon": "images/icons/z19.png",
@@ -9,12 +9,6 @@
   "background": {
     "page": "background.html"
   },
-  // "content_scripts":[{
-  //   //"js": ["blogchecker.js"],
-  //   // "css": ["mcz.css"],
-  //   //"matches":["http://*/*", "https://*/*"]
-  // }
-  // ],
   "icons": {
     "16": "images/icons/z16.png",
     "48": "images/icons/z48.png",
