@@ -6,6 +6,9 @@
     "default_icon": "images/icons/z19.png",
     "default_popup": "popup.html"
   },
+  "background": {
+    "page": "background.html"
+  },
   // "content_scripts":[{
   //   //"js": ["blogchecker.js"],
   //   // "css": ["mcz.css"],
@@ -18,7 +21,9 @@
     "128": "images/icons/z128.png"
   },
   "permissions": [
+    "notifications",
     "tabs",
+    "background",
     "http://ameblo.jp/takagi-sd",
     "http://ameblo.jp/momota-sd",
     "http://ameblo.jp/tamai-sd",
