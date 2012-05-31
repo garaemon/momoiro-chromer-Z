@@ -23,7 +23,6 @@ $(function() {
         blogEntryList(data)
           .slice(0, MAX_ARTICLE_NUM)
           .each(function(i) {
-            console.log("hoge");
             links.push(blogEntrySpec($(this)));
           });
         $("#" + name + "-blog ul").append(links.map(function(x) {

@@ -30,6 +30,7 @@ $(function() {
                 latest.title);
               n.onclick = function() {
                 chrome.tabs.create({url: latest.link});
+                n.cancel();
               };
               n.show();
               LATEST_BLOGS_ARTICLES[name].notification = n; //to avoid GC problem
