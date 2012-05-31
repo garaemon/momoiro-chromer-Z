@@ -78,7 +78,7 @@ $(function() {
   }, 1000);
   var n;
   // UST
-  var ustream_onlinp = false;
+  var ustream_onlinep = false;
   function ustWatch() {
     $.ajax({
       url: UST_URL,
@@ -92,11 +92,12 @@ $(function() {
         if (data.match(/現在、番組はオフラインです/) ||
             data.match(/Channel is offline/)) {
           console.log("ustream is offline");
-          ustream_onlinp = false;
+          ustream_onlinep = false;
           return;
         }
         else {
-          if (!ustream_onlinp) {
+          if (!ustream_onlinep) {
+            ustream_onlinep = true;
             var icon = data.match(/class="image".+src="([^"]+)/gi)
               ? RegExp.$1 : 'img/icon.png';
             n = webkitNotifications.createNotification(icon,
@@ -104,7 +105,7 @@ $(function() {
                                                        'ustreamはじまってるよ!');
             n.onclick = function () {
               chrome.tabs.create({ url : UST_URL});
-              notification.cancel();
+              n.cancel();
             };
             n.show();
           }
